@@ -4,39 +4,9 @@
   <title>WEB 1 - JavaScript</title>
   <meta charset="utf-8">
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script>
-  function LinkssetColor(color){
-    var links = document.querySelectorAll('a');
-    var i = 0;
-    while(i < links.length){
-      links[i].style.color = color;
-      i = i + 1;
-  }
-}
-  function BodysetColor(color){
-    document.querySelector('body').style.color = color;
-  }
-  function BodysetBackGroundColor(color){
-    document.querySelector('body').style.backgroundColor = color;
-  }
-    function nightDayhandler(self){
-      var target = document.querySelector('body');
-      if(self.value == 'night'){
-        BodysetBackGroundColor('black');
-        BodysetColor('white');
-        self.value = 'day';
+  <script src = "colors.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-        LinkssetColor('powderblue');
-        }
-      else{
-        BodysetBackGroundColor('white');
-        BodysetColor('black');
-        self.value = 'night';
-
-        LinkssetColor('red');
-        }
-    }
-  </script>
 </head>
 
 <body>

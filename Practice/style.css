@@ -5,28 +5,57 @@ body {
 }
 
 .topnav {
-  background-color: #123;
+  background-color: white;
   overflow: hidden;
+  margin-right: 20px;
+  margin-top : 15px;
+}
+
+.topnav a.img-button {
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  background-size: cover;
+}
+#google-button{
+  text-align: center;
+  padding-top : 60px;
+  margin-top : 60px;
+
+}
+#text-box{
+  background-image: url(icon2.png);
+  background-position: 15px center;
+  background-size: 25px;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  padding-left: 40px;
+  margin-top : 20px;
+  border-radius : 20px;
+  width: 550px;
+  padding : 13px;
+  border : 0.5px solid #A9A9A9;
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
-  float: left;
-  color: #f2f2f2;
+  float: right;
+  color: black;
   text-align: center;
-  padding: 14px 16px;
+  padding: 10px 10px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 13px;
 }
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: #abc;
   color: black;
 }
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: #4CAF50;
+  background-color: #6495ED;
+  border-radius : 100%;
   color: white;
 }

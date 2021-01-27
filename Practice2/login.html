@@ -1,0 +1,25 @@
+<HTML>
+  <script type="text/javascript" >
+    function check(){
+      if(Loginform.uid.value =="") {
+        alert("id를 입력하세요")
+        return false;
+      }
+      else if(Loginform.pwd.value =="") {
+        alert("pwd를 입력하세요")
+        return false;
+      }
+      else { return true; }
+    }
+  </script>
+    <body>
+      <FORM name=“Loginform” METHOD=“post” ACTION="login.jsp" >
+        로그인명 :<INPUT TYPE="text" NAME="uid">
+          <br>
+        패스워드 :<INPUT TYPE="password" NAME="pwd">
+          <br>
+        <INPUT TYPE="image" src="submit.gif" onclick="return check()">
+        <INPUT TYPE="reset" value="재작성">
+      </FORM>
+    </body>
+</HTML>

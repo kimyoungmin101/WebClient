@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>체크박스 만들기</title>
+  </head>
+  <body>
+    <h3>먹고싶은것 모두 체크하세요</h3>
+    <form>
+      짜장면 <input type="checkbox" value="1">
+      짬뽕 <input type="checkbox" value="2", checked>
+      탕수육 <input type="checkbox" value="3">
+      <br>
+      진라면 <input type="radio" name="ramen" value="1">
+      신라면 <input type="radio" name="ramen" value="2">
+      안성탕면 <input type="radio" name="ramen" value="3">
+      <br>
+      콤보 박스 : <select class="" name="food">
+        <option value="1">떡볶이</option>
+        <option value="2">돼지고기</option>
+        <option value="3">소고기</option>
+      </select>
+      <br>
+      식사 : <input type="text" list = "eat">
+      <datalist id = "eat">
+        <option value="1">
+        <option value="2">
+        <option value="3">
+      </datalist>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+h1{text-align: center; color : brown}
+
+body{ background-color: aliceblue}
+
+hr.header{border: 1px solid}
+
+a{
+  text-decoration: none;
+}
+
+h3 {
+  text-shadow : 3px 3px 5px; skyBlue;
+}
+
+ul{
+  border: 1px dotted;
+}
+
+p{
+  font-size : 1em;
+  text-indent : 1em;
+  font-family: "휴먼편지체";
+}
+
+footer{
+  background-color: orange;
+  border-radius: 10px;
+}

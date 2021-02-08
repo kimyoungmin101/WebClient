@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>overflow 활용</title>
+    <style media="screen">
+      p{
+        width: 15em;
+        height : 3em;
+        border : 1px solid lightgray;
+      }
+      .hidden{
+        overflow : hidden;
+      }
+      .scroll{
+        overflow : scroll;
+      }
+      .visible{
+        overflow : visible;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h3>overflow 프로퍼티</h3>
+    <p class = "hidden">overflow에 hidden 값을 적용하면 박스를 넘어가는 내용이 잘려 보이지 않습니다.</p>
+    <br>
+    <p class = "scroll">overflow에 scroll 값을 적용하면 박스를 넘어가는 내용이 scroll 가능하게 됩니다.</p>
+    <br>
+    <p class = "visible">overflow에 visible 값을 적용하면 박스를 넘어가는 내용이 visible 가능하게 됩니다.</p>
+  </body>
+</html>

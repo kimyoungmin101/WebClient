@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>position</title>
+    <style media="screen">
+      div{
+        display : inline-block;
+        height : 50px;
+        width : 50px;
+        border : 1px solid lightgray;
+        text-align : center;
+        color : white;
+        background : red;
+      }
+      p{
+        display : inline-block;
+        position : fixed;
+        right : 10px;
+        width : 100px;
+        height : 100px;
+        bottom: 30px;
+        background : lightgray;
+        text-align : center;
+        line-height: 100px;
+
+      }
+      #down:hover{
+        position : relative;
+        left : 20px;
+        top : 20px;
+        background : green;
+      }
+
+      #up:hover{
+        position : relative;
+        right : 20px;
+        bottom : 20px;
+        background : green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h3>상대 배치, relative</h3>
+    <hr>
+      <div>T</div>
+      <div id="down">h</div>
+      <div>A</div>
+      <div>N</div>
+      <div id="up">K</div>
+      <div>S</div>
+      <p>X</p>
+  </body>
+</html>

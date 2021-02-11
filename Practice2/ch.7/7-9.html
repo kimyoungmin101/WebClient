@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>계좌 정보 만들기</title>
+    <script type="text/javascript">
+      function inquiry() {return this.balance;} // 잔금조회
+      function deposit(money){
+        this.balance += money;
+      }
+      function withdraw(money){
+        this.balance -= money;
+        return money;
+      }
+
+      var account = new Object();
+      account.owner = "김영민";
+      account.balance = 10000;
+      account.code = '111';
+      account.inquiry = inquiry;
+      account.deposit = deposit;
+      account.withdraw = withdraw;
+    </script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      account.deposit(10000);
+      document.write("10000원 저금 후 잔액은 " + account.inquiry() + "<br>");
+      account.withdraw(30000);
+      document.write("30000원 출금 후 잔액은 " + account.inquiry() + "<br>");
+    </script>
+  </body>
+</html>

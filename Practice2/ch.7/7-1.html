@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>갹채 생성 및 활용</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var today = new Date();
+
+      document.write("오늘은 : " + today.toLocaleString() + "<br>");
+
+      var mystr = new String("자바스크립트 공부");
+
+      document.write("글자는 : " + mystr + " 입니다. <br><br>")
+      document.write("글자 길이는 : " + mystr.length + " 입니다. <br><br>");
+
+      var array = new Array("월", "화", "수", "목", "금", "토", "일");
+      array.reverse();
+
+      var N = ['수','목','금'];
+      array = array.concat(N);
+      array = array.join(",");
+
+      document.write(array + "<br>");
+
+      for(var i = 0; i < array.length; i++){
+        if(array[i] == ','){
+          continue;
+        }
+        document.write("요일 : " + array[i] + "입니다. <br>");
+      }
+
+    </script>
+  </body>
+</html>

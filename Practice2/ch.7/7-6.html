@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>방문 시간에 따라 배경색이 변한다.</title>
+  </head>
+  <body>
+    <h2>홀수 초시간 : lightskyblue / 짝수 초시간 : violet</h2>
+    <hr>
+    <script type="text/javascript">
+      var time = new Date();
+
+      if(time.getSeconds() % 2 == 0){
+        document.body.style.backgroundColor = "Violet";
+      }
+      else{
+        document.body.style.backgroundColor = "lightskyblue";
+      }
+
+      document.write("<h3>현재시각</h3>");
+      document.write(time.toLocaleString(), "시각 <br>");
+      document.write(time.getHours(), "시 <br>");
+      document.write(time.getMinutes(), "분 <br>");
+      document.write(time.getSeconds(), "초 <br>");
+    </script>
+  </body>
+</html>

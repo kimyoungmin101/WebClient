@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>프로토타입으로 객체 만들기</title>
+    <script type="text/javascript">
+      function Account(owner, code, balance){
+        this.owner = owner;
+        this.code = code;
+        this.balance = balance;
+
+        this.inquiry = function() { return this.balance;}
+        this.deposit = function(money){ this.balance += money;}
+        this.withdraw = function(money) {
+          this.balnace -= money;
+          return money;
+        }
+      }
+
+
+    </script>
+  </head>
+  <body>
+    <h3>프로토타입 만들기</h3>
+    <hr>
+    <script type="text/javascript">
+      var account1 = new Account("김영민", "111", 20000);
+      var account2 = new Account("강호동", "123", 30000);
+
+
+      document.write("김영민의 계좌 잔액은 : " + account1.balance + "<br>");
+      document.write("강호동의 계좌 잔액은 : " + account2.balance + "<br>");
+      account1.deposit(10000);
+      document.write("10000원 입금 후 김영민의 계좌 잔액은 : " + account1.balance + "<br>");
+      account2.deposit(100000);
+      document.write("100000원 입금 후 강호동의 계좌 잔액은 : " + account2.balance + "<br>");
+
+    </script>
+  </body>
+</html>

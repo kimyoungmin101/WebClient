@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h3>문자열 분할</h3>
+    <hr>
+    <script type="text/javascript">
+      var input = prompt("문자열 입력");
+
+      input = input.split("&")
+      
+      for(var i = 0; i < input.length; i++){
+        document.write(input[i] + "<br>");
+      }
+      /*
+      document.write("<br>");
+      for(var i = 0; i < input.length; i++){
+        if(input[i] == "&")
+          document.write("<br>")
+        else
+          document.write(input[i]);
+      }
+      */
+    </script>
+  </body>
+</html>

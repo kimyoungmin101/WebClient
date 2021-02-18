@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>난수 10개 생성</title>
+  </head>
+  <body>
+    <h3>난수 10개 생성</h3>
+    <hr>
+    <script type="text/javascript">
+      var array = []
+      for(var i = 0; i < 10; i++){
+        array[i] = Math.floor(Math.random() * 100);
+        document.write(array[i] + " ");
+      }
+      document.write("<hr>");
+      var max = 0
+      for(var i = 0; i < array.length; i++){
+        if(array[i] > max){
+          max = array[i]
+        }
+      }
+      document.write("가장 큰 수는 : " + max + "<br>");
+      document.write("<hr>");
+
+      array.sort();
+
+      for(var i = 0; i < 10; i++){
+        document.write(array[i] + " ");
+      }
+    </script>
+  </body>
+</html>

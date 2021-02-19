@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>17개의 CSS2 색이름과 색</title>
+    <style>
+      div {
+  	     display : inline-block;
+  	      width : 150px;
+  	       padding : 10px;
+         }
+       </style>
+  </head>
+    <body>
+      <h3>17개의 CSS2 색이름과 색</h3>
+      <hr>
+      <script>
+        var colorNames = [];
+
+        for(var i = 0; i < 16; i++){
+          var arr = []
+          for(var j = 0; j < 3; j++){
+              arr[j] = Math.floor(Math.random() * 255);
+          }
+          colorNames[i] = arr;
+        }
+
+
+
+        for(i=0; i<colorNames.length; i++) {
+          //document.write(colorNames[i][0] + " " + colorNames[i][1] + " " + colorNames[i][2] + "<br>");
+           var str = "<div style='background-color: rgb(" + colorNames[i][0] + "," + colorNames[i][1] + "," + colorNames[i][2] + ")" + "'>" +
+             "color : " + colorNames[i][0] + "," + colorNames[i][1] + "," + colorNames[i][2] + "</div>";
+           document.write(str);
+        }
+      </script>
+    </body>
+</html>

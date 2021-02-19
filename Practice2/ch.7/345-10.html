@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>book 개체 배열 만들기</title>
+    <script type="text/javascript">
+      function book(title, author, price){
+        this.title = title;
+        this.author = author;
+        this.price = price;
+      }
+    </script>
+  </head>
+  <body>
+    <h3>book 객체 배열 만들기</h3>
+    <hr>
+    <script type="text/javascript">
+      var array = [];
+      var max = 0;
+      var title = "";
+
+      for(var i = 0; i < 5; i++){
+        var input = prompt("콤마(,)로 분리하면서 책 제목 저자 가격을 입력");
+        input = input.split(",");
+        array[i] = input;
+
+        if(input[2] >= max){
+          max = input[2];
+          title = input[0];
+        }
+
+        document.write(input[0] + ", " + input[1] + ", " + input[2] + "<br>");
+      }
+      document.write("<hr>");
+      document.write("가장 가격이 비싼 책은 " + title + "<br>");
+    </script>
+  </body>
+</html>

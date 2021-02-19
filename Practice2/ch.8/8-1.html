@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Html Dom트리</title>
+  </head>
+  <body>
+    <h3>Dom객체 p의 프로퍼티, 스타일, 이벤트 리스너</h3>
+    <hr>
+    <p id = "firstP" style = "color : blue; background:yellow;" onclick="this.style.color = 'teal'">이것은
+    <span style = "color : red">문장입니다.</span></p>
+    <script type="text/javascript">
+      var p = document.getElementById("firstP");
+      var text = "P.id = " + p.id + "\n";
+      text += "P.tagName = " + p.tagName + "\n";
+      text += "p.innerName = " + p.innerHtml + "\n";
+      text += "p.onclick = " + p.onclick + "\n";
+
+      alert(text);
+    </script>
+  </body>
+</html>

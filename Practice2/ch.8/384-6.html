@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>inner HTML</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+      function doclick(){
+        var n = prompt("HTML 텍스트 혹은 그냥 택스트를 입력하세요");
+        var m = document.getElementById("n");
+        m.innerHTML = n;
+      }
+
+    </script>
+
+    <h3>inner HTML</h3>
+    <hr>
+    <p id = "n" onclick ="doclick()">이번 여름에는 어디로 여행을 갈 까요?</p>
+
+  </body>
+</html>

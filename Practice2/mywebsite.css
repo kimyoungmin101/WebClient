@@ -1,3 +1,6 @@
+body{
+  background : #FFF0F5;
+}
 #menubar {
   background : olive;
   float : right;
@@ -43,9 +46,10 @@ input[type=submit]{
   margin-left: 40%;
 }
 
-input:hover, textarea:hove{
+input:hover, textarea:hover{
   background : aliceblue;
 }
+
 input[type:text]:focus{
   font-size: 120%;
 }
@@ -66,7 +70,7 @@ thead, tfoot{
   color : black;
 }
 
-tbody tr:nth-child(even){ /*짝수에만 적용*/
+tbody tr{ /*짝수에만 적용*/
   background : aliceblue;
 }
 tbody tr:hover{

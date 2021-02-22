@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>button 누르면 입력하면 계속 이어쓸 수 있도록!</title>
+    <script type="text/javascript">
+      function Aclick(parent){
+        var text = prompt('문자열을 입력하세요', '기본 값 문자열');
+
+        if(text == "" || text == null){
+          return
+        }
+
+        var q = document.createElement("p");
+        q.innerHTML = text;
+        parent.appendChild(q);
+      }
+
+    </script>
+  </head>
+  <body>
+    <h3>prompt로 입력하고 이어 쓰기</h3>
+    <hr>
+    <p onclick="Aclick(this)">클릭해보세요</p>
+  </body>
+</html>

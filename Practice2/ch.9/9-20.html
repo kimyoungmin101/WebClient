@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>키 이벤트 리스너</title>
+    <script type="text/javascript">
+    function whatKeyDown(e){
+      str = "";
+      var div = document.getElementById("div");
+      div.innerHTML = "";
+
+      if(e.altKey){
+        if(e.altLeft){
+          str += "왼쪽 alt키가 눌러졌습니다.";}
+        else{
+        str += "오른쪽 alt키가 눌러졌습니다.";
+      }
+        str += "<br>";
+      }
+      else if (e.shiftKey) {
+        if(e.shiftLeft) str += "왼쪽 shift키가 눌러졌습니다.";
+        else str += "오른쪽 shift키가 눌러졌습니다.";
+        str += "<br>";
+      }
+      else if(e.ctrlKey){
+        if(e.ctrlLeft) str += "왼쪽 ctrl 키가 눌러졌습니다.";
+        else str += "오른쪽 CTRL키가 눌러졌습니다.";
+        str += "<br>";
+      }
+      else str += String.fromCharCode(e.keyCode) + "키가 눌러졌습니다";
+      div.innerHTML = str;
+    }
+    </script>
+  </head>
+  <body>
+    <h3>키 리스너와 키 이벤트 객체의 프로퍼티</h3>
+    <hr>
+    <p>텍스트 창에 키를 눌러 보세요. alt, shift, ctrl 키도 가능합니다.</p>
+    <input type="text" id = "text" onkeydown="whatKeyDown(event)">
+    <br>
+    <br>
+    <div id = "div">어떤키가 눌러졌을까요?
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>포커스</title>
+    <script type="text/javascript">
+      window.onfocus = function(){
+        var body = document.getElementById("body");
+        body.style.backgroundColor = "gray";
+      }
+      window.onblur = function(){
+        var body = document.getElementById("body");
+        body.style.backgroundColor = "pink";
+      }
+    </script>
+  </head>
+  <body id = "body">
+    <h3>포커스와 Onblur, Onfocus</h3>
+    <hr>
+    <p>브라우저 바깥에 마우스를 클릭하면 window 객체에 blur
+      이벤트가 발생하고 다시 마우스를 클릭하면 window객체에
+      focus 이벤트가 발생한다.</p>
+  </body>
+</html>

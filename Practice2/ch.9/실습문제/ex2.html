@@ -2,34 +2,32 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>라디오버튼</title>
+    <title>라디오 버튼</title>
     <script type="text/javascript">
-      var found = null;
-      var v = document.getElementsByName("fruit");
-      var div = document.getElementById("div");
+      function fruitchange(){
+        var fruits = document.getElementsByName("fruit");
+        var v = null;
 
-      for(var i = 0; i < v.length; i++){
-        if(v[i].checked == true)
-          found = v[i];
+        for(var i = 0; i < fruits.length; i++){
+          if(fruits[i].checked == true){
+            v = fruits[i].value;
+          }
+        }
+
+        var img = document.getElementById("fruitimage");
+        img.src = "media/" + v + ".png";
       }
-      if(found != null)
-        alert(found.value + "이 선택 되었음");
-      else:
-        alert("노선택")
-
     </script>
   </head>
   <body>
     <h3>라디오 버튼을 클릭하면 이미지를 출력합니다.</h3>
     <hr>
     <form>
-      <input type="radio" name = "fruit" value = "banana">바나나
-      <input type="radio" name = "fruit" value = "mango">망고
-      <input type="radio" name = "fruit" value = "apple">사과
+      <input type="radio" name = "fruit" value="apple" onclick= "fruitchange()"> 사과
+      <input type="radio" name = "fruit" value="banana" onclick= "fruitchange()"> 바나나
+      <input type="radio" name = "fruit" value="mango" onclick= "fruitchange()"> 망고
+      <br>
+      <img id = "fruitimage" src= "media/apple.png" alt="">
     </form>
-    <div id = "div">
-
-    </div>
-
   </body>
 </html>

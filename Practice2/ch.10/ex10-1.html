@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>윈도우 열기</title>
+    <script type="text/javascript">
+      var newWin = null;
+      function load(URL){
+        newWin = window.open(URL, "mywin", "left=300,top=300,width=400,height=300");
+      }
+      function closeNewWindow(){
+        if(newWin == null || newWin.closed){
+          return
+        }
+        else{
+          newWin.close();
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h3>window.open()으로 윈도우 열기</h3>
+    <hr>
+    <a href="javascript:load('http://www.graceland.com')">엘비스 프레슬리 홈페이지</a><br>
+    <a href="javascript:window.close()">현재 윈도우 닫기</a><br>
+    <a href="javascript:closeNewWindow()">새윈도우 닫기</a><br>
+  </body>
+</html>

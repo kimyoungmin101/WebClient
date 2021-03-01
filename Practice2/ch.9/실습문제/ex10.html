@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>계산기 만들기</title>
+    <style media="screen">
+      .button{
+        width : 50px;
+      }
+      #text {
+        width : 205px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>계산기 만들기</h3>
+    <hr>
+    <input id = 'text' type="text" id = "result" value="0">
+    <br>
+
+    <script type="text/javascript">
+	  var tex = '';
+      function calc(value){
+        var exp = document.getElementById('text');
+        if(value == '='){
+        	var result = eval(exp.value);
+            tex = result;
+            exp.value = tex;
+        }
+        else if(value == 'CE' || value == 'C'){
+        	tex = '';
+            exp.value = tex;
+        }
+        else if(value == 'NONE'){
+        	countinue;
+        }
+        else if(value == 'BACK'){
+        	tex = tex.slice(0, -1);
+            exp.value = tex;
+        }
+        else{
+        	tex += value;
+        	exp.value = tex;
+        }
+
+      }
+      var arr = ['BACK', 'CE', 'C', '=', '7', '8', '9', '/', '4', '5', '6', '*', '1', '2', '3', '-', '0', '+', 'NONE', 'NONE']
+      var num = 0;
+      document.write("<table>");
+        document.write("<tbody>");
+            for(var i = 0; i < 5; i++){
+            document.write("<tr>");
+              for(var k = 0; k < 4; k++){
+                  document.write("<td>" + "<input type = " + 'button' + " class =" + 'button' + " value=" + arr[num] + " name = " + arr[num] + " onclick =" + 'calc(this.value)' + ">" + "</td>");
+                  num += 1;
+              }
+              document.write("</tr>");
+            }
+        document.write("</tbody>");
+      document.write("</table>");
+    </script>
+
+  </body>
+</html>

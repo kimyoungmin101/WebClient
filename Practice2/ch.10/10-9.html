@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>웹사이트 접속</title>
+    <script type="text/javascript">
+      function load(){
+        var select = document.getElementById("select");
+        var win = window.open();
+        win.location = select.options[select.selectedIndex].value;
+      }
+    </script>
+  </head>
+  <body>
+    <h3>window.location으로 웹사이트 접속</h3>
+    <hr>
+    사이트 선택 :
+    <select id = 'select'>
+      <option value="http://www.naver.com">네이버</option>
+      <option value="http://www.google.com" selected>구글</option>
+      <option value="http://www.daum.net">다음</option>
+    </select>
+    <br>
+    <input type="button" value= "웹사이트 접속" onclick = "load()">
+  </body>
+</html>

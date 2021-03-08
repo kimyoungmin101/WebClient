@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>눈 내리는 샤갈의 마을</title>
+    <style media="screen">
+      body {
+        background-image : url(snow.jpeg);
+        background-size : 100%;
+        background-repeat : no-repeat;
+      }
+      div {
+        position : absolute;
+        font-size: 3em;
+        color : white;
+      }
+      p{
+        color : white;
+      }
+    </style>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var arr = []
+      var timeId = setInterval("timemove()", 1000);
+
+      for(var i = 0; i < 30; i ++){
+        var x = Math.floor(Math.random() * 100);
+        var y = Math.floor(Math.random() * 100);
+
+        arr[i] = [x, y];
+        }
+
+      function timemove(){
+          for(var i = 0; i < arr.length; i++){
+            arr[i][1] += 1;
+            if(arr[i][1] >= 100){
+              arr[i][1] = 0;
+            }
+            if(i == 10){
+                document.write("<p>" + arr[i] + "</p>");
+            }
+            //document.write("<div style = 'left : " + arr[i][0] + "%;" + " top :" + arr[i][1] + "%;" + "'>" + '*' + "</div>");
+          }
+      }
+
+    </script>
+  </body>
+</html>

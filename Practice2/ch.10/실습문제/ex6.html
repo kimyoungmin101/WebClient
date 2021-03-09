@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width : 130px;
+            background-color: aqua;
+            border: 1px solid;
+        }
+    </style>
+    <script>
+        let isPause = true;
+        let timer = null;
+
+        function init() {
+            var div = document.getElementById("div");
+            click();
+            div.addEventListener("click", click);
+        }
+
+        function getT(){
+            ispause = true;
+            let today = new Date();
+            let hours = today.getHours(); // 시
+            let minutes = today.getMinutes();  // 분
+            let seconds = today.getSeconds();  // 초
+
+            var divT = document.getElementById("div");
+            var text = "";
+            if(hours >= 12){
+                text += '오후 ';
+            }
+            else{
+                text += '오전 ';
+            }
+            text = text + hours + ':' + minutes + ':' + seconds
+            divT.innerHTML = text;
+        }
+        function click(){
+            if(isPause == false){
+                isPause = true;
+                div.style.color = "gray";
+                clearInterval(timer);
+            }
+            else{
+                isPause = false;
+                div.style.color = "black";
+                timer = setInterval("getT()", 100);
+            }
+        }
+    </script>
+</head>
+<body onload = "init()">
+    <h3>div 태그에 시계 만들기</h3>
+    <hr>
+    <div id="div"></div>
+</body>
+</html>

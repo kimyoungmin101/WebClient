@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check(){
+            var site = navigator.vendor;
+            var ans = "";
+            for(var i =0; i<6; i++){
+                ans += site[i];
+            }
+            if(ans == 'Google'){
+                alert( '구글 chrome 브라우저 입니다.' );
+            }      
+            }
+    </script>
+</head>
+<body onload="check()">
+    <h3>구글 chrome 브라우저 감별</h3>
+    <hr>
+    <p>웹 브라우저에 따라 지원되는 자바스크립트들이 다를 수도 있습니다. Dom의 기능은 표준화 돼있어 동일하지만 다릅니다. 
+        기능으로 승부보자하지만 쉽지않은건 사실입니다.
+    </p>
+</body>
+</html>

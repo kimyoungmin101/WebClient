@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>타원 그리기</h3>
+    <hr>
+    <canvas id="canvas1" style="background-color: aliceblue" width="200" height="150"></canvas>
+    <script>
+        var canvas = document.getElementById("canvas1");
+        var context = canvas.getContext("2d");
+
+        context.beginPath();
+        context.strokeStyle = "magenta";
+        context.arc(100, 70, 30, 0, 2*Math.PI, false);
+        context.stroke();
+
+        context.beginPath();
+        context.strokeStyle = "blue";
+        context.arc(100, 70, 50, Math.PI/2, Math.PI, true);
+        context.stroke();
+        
+    </script>
+</body>
+</html>
